@@ -1,0 +1,829 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F40913722634B53D0067D3E1 /* Xcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40913712634B53D0067D3E1 /* Xcode.swift */; };
+		F412B0F42634F87B00DDE29E /* Process-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412B0F32634F87B00DDE29E /* Process-Extensions.swift */; };
+		F412B0F92634F8BC00DDE29E /* XcodeSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412B0F82634F8BC00DDE29E /* XcodeSearcher.swift */; };
+		F412B1312635B28800DDE29E /* ActionPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412B1302635B28800DDE29E /* ActionPublisher.swift */; };
+		F412B13B2635B2B800DDE29E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412B13A2635B2B800DDE29E /* Localizable.swift */; };
+		F412B1402635B2BF00DDE29E /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412B13F2635B2BF00DDE29E /* LocalizedStrings.swift */; };
+		F412B14D2635B3A400DDE29E /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412B14C2635B3A400DDE29E /* StatusBar.swift */; };
+		F485A4E8265A7109005B8315 /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485A4E7265A7108005B8315 /* StatusItem.swift */; };
+		F485A4EA265A7319005B8315 /* QuitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485A4E9265A7319005B8315 /* QuitItem.swift */; };
+		F485A4EC265BD810005B8315 /* SMJobBlessUtil.py in Resources */ = {isa = PBXBuildFile; fileRef = F485A4EB265BD810005B8315 /* SMJobBlessUtil.py */; };
+		F485A4EE265BDA75005B8315 /* XcodeMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F485A4ED265BDA75005B8315 /* XcodeMenuItemView.xib */; };
+		F485A4F2265BE103005B8315 /* XcodeMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485A4F1265BE103005B8315 /* XcodeMenuItemViewController.swift */; };
+		F4894B2E263F852E00E8B861 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B2D263F852E00E8B861 /* main.swift */; };
+		F4894B37263F855000E8B861 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B32263F855000E8B861 /* HelperProtocol.swift */; };
+		F4894B38263F855000E8B861 /* HelperAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B33263F855000E8B861 /* HelperAuthorization.swift */; };
+		F4894B39263F855000E8B861 /* HelperAuthorizationRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B34263F855000E8B861 /* HelperAuthorizationRight.swift */; };
+		F4894B3A263F855000E8B861 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B35263F855000E8B861 /* Helper.swift */; };
+		F4894B3B263F855000E8B861 /* HelperConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B36263F855000E8B861 /* HelperConstants.swift */; };
+		F4894B3D263F855C00E8B861 /* AppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B3C263F855C00E8B861 /* AppProtocol.swift */; };
+		F4894B3E263F856300E8B861 /* AppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B3C263F855C00E8B861 /* AppProtocol.swift */; };
+		F4894B3F263F860E00E8B861 /* HelperAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B33263F855000E8B861 /* HelperAuthorization.swift */; };
+		F4894B40263F861100E8B861 /* HelperAuthorizationRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B34263F855000E8B861 /* HelperAuthorizationRight.swift */; };
+		F4894B41263F861400E8B861 /* HelperConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B36263F855000E8B861 /* HelperConstants.swift */; };
+		F4894B42263F861800E8B861 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B32263F855000E8B861 /* HelperProtocol.swift */; };
+		F4894B46263FF5B500E8B861 /* CodesignCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B45263FF5B500E8B861 /* CodesignCheck.swift */; };
+		F4894B49263FF80E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4894B2B263F852E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F4894B4F2645655800E8B861 /* HelperConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B4E2645655800E8B861 /* HelperConnector.swift */; };
+		F4894B552652B7D300E8B861 /* XcodeMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B542652B7D300E8B861 /* XcodeMenuItem.swift */; };
+		F4CE8C792634141F00864C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE8C782634141F00864C42 /* AppDelegate.swift */; };
+		F4CE8C7B2634141F00864C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE8C7A2634141F00864C42 /* ViewController.swift */; };
+		F4CE8C7D2634142E00864C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CE8C7C2634142E00864C42 /* Assets.xcassets */; };
+		F4CE8C802634142E00864C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CE8C7E2634142E00864C42 /* Main.storyboard */; };
+		F4CE8C8C2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE8C8B2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.swift */; };
+		F4CE8C972634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE8C962634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4894B4A263FF82700E8B861 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4CE8C6D2634141F00864C42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4894B2A263F852E00E8B861;
+			remoteInfo = XcodeBuildHelper;
+		};
+		F4CE8C882634142E00864C42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4CE8C6D2634141F00864C42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4CE8C742634141F00864C42;
+			remoteInfo = XcodeChangerMenuarExtra;
+		};
+		F4CE8C932634142E00864C42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4CE8C6D2634141F00864C42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4CE8C742634141F00864C42;
+			remoteInfo = XcodeChangerMenuarExtra;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4894B29263F852E00E8B861 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F4894B48263FF7FA00E8B861 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				F4894B49263FF80E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F40913712634B53D0067D3E1 /* Xcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xcode.swift; sourceTree = "<group>"; };
+		F412B0F32634F87B00DDE29E /* Process-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process-Extensions.swift"; sourceTree = "<group>"; };
+		F412B0F82634F8BC00DDE29E /* XcodeSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeSearcher.swift; sourceTree = "<group>"; };
+		F412B1102635933700DDE29E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		F412B1302635B28800DDE29E /* ActionPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPublisher.swift; sourceTree = "<group>"; };
+		F412B13A2635B2B800DDE29E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		F412B13F2635B2BF00DDE29E /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		F412B14C2635B3A400DDE29E /* StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		F485A4E7265A7108005B8315 /* StatusItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
+		F485A4E9265A7319005B8315 /* QuitItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitItem.swift; sourceTree = "<group>"; };
+		F485A4EB265BD810005B8315 /* SMJobBlessUtil.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = SMJobBlessUtil.py; sourceTree = "<group>"; };
+		F485A4ED265BDA75005B8315 /* XcodeMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XcodeMenuItemView.xib; sourceTree = "<group>"; };
+		F485A4F1265BE103005B8315 /* XcodeMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeMenuItemViewController.swift; sourceTree = "<group>"; };
+		F4894B2B263F852E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.masakih.XcodeSwitcherMenuBarHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4894B2D263F852E00E8B861 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F4894B32263F855000E8B861 /* HelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperProtocol.swift; sourceTree = "<group>"; };
+		F4894B33263F855000E8B861 /* HelperAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperAuthorization.swift; sourceTree = "<group>"; };
+		F4894B34263F855000E8B861 /* HelperAuthorizationRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperAuthorizationRight.swift; sourceTree = "<group>"; };
+		F4894B35263F855000E8B861 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F4894B36263F855000E8B861 /* HelperConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperConstants.swift; sourceTree = "<group>"; };
+		F4894B3C263F855C00E8B861 /* AppProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppProtocol.swift; sourceTree = "<group>"; };
+		F4894B43263FF3F600E8B861 /* Helper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Helper-Info.plist"; sourceTree = "<group>"; };
+		F4894B44263FF50800E8B861 /* Helper-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Helper-Launchd.plist"; sourceTree = "<group>"; };
+		F4894B45263FF5B500E8B861 /* CodesignCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodesignCheck.swift; sourceTree = "<group>"; };
+		F4894B4E2645655800E8B861 /* HelperConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperConnector.swift; sourceTree = "<group>"; };
+		F4894B542652B7D300E8B861 /* XcodeMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeMenuItem.swift; sourceTree = "<group>"; };
+		F4CE8C752634141F00864C42 /* XcodeSwitcherMenuBarExtra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeSwitcherMenuBarExtra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CE8C782634141F00864C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4CE8C7A2634141F00864C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4CE8C7C2634142E00864C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4CE8C7F2634142E00864C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4CE8C812634142E00864C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CE8C872634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeSwitcherMenuBarExtraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CE8C8B2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeSwitcherMenuBarExtraTests.swift; sourceTree = "<group>"; };
+		F4CE8C8D2634142E00864C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CE8C922634142E00864C42 /* XcodeSwitcherMenuBarExtraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeSwitcherMenuBarExtraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CE8C962634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeChangerMenuarExtraUITests.swift; sourceTree = "<group>"; };
+		F4CE8C982634142E00864C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4894B28263F852E00E8B861 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CE8C722634141F00864C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CE8C842634142E00864C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CE8C8F2634142E00864C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4894B2C263F852E00E8B861 /* XcodeSwitcherMenuBarHelper */ = {
+			isa = PBXGroup;
+			children = (
+				F4894B32263F855000E8B861 /* HelperProtocol.swift */,
+				F4894B2D263F852E00E8B861 /* main.swift */,
+				F4894B35263F855000E8B861 /* Helper.swift */,
+				F4894B33263F855000E8B861 /* HelperAuthorization.swift */,
+				F4894B34263F855000E8B861 /* HelperAuthorizationRight.swift */,
+				F4894B36263F855000E8B861 /* HelperConstants.swift */,
+				F485A4EB265BD810005B8315 /* SMJobBlessUtil.py */,
+				F4894B45263FF5B500E8B861 /* CodesignCheck.swift */,
+				F4894B43263FF3F600E8B861 /* Helper-Info.plist */,
+				F4894B44263FF50800E8B861 /* Helper-Launchd.plist */,
+			);
+			path = XcodeSwitcherMenuBarHelper;
+			sourceTree = "<group>";
+		};
+		F4CE8C6C2634141F00864C42 = {
+			isa = PBXGroup;
+			children = (
+				F4CE8C772634141F00864C42 /* XcodeSwitcherMenuBarExtra */,
+				F4894B2C263F852E00E8B861 /* XcodeSwitcherMenuBarHelper */,
+				F4CE8C8A2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests */,
+				F4CE8C952634142E00864C42 /* XcodeSwitcherMenuBarExtraUITests */,
+				F4CE8C762634141F00864C42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4CE8C762634141F00864C42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE8C752634141F00864C42 /* XcodeSwitcherMenuBarExtra.app */,
+				F4CE8C872634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.xctest */,
+				F4CE8C922634142E00864C42 /* XcodeSwitcherMenuBarExtraUITests.xctest */,
+				F4894B2B263F852E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4CE8C772634141F00864C42 /* XcodeSwitcherMenuBarExtra */ = {
+			isa = PBXGroup;
+			children = (
+				F4894B3C263F855C00E8B861 /* AppProtocol.swift */,
+				F4894B4E2645655800E8B861 /* HelperConnector.swift */,
+				F4CE8C782634141F00864C42 /* AppDelegate.swift */,
+				F412B1302635B28800DDE29E /* ActionPublisher.swift */,
+				F412B14C2635B3A400DDE29E /* StatusBar.swift */,
+				F485A4E7265A7108005B8315 /* StatusItem.swift */,
+				F4894B542652B7D300E8B861 /* XcodeMenuItem.swift */,
+				F485A4F1265BE103005B8315 /* XcodeMenuItemViewController.swift */,
+				F485A4ED265BDA75005B8315 /* XcodeMenuItemView.xib */,
+				F485A4E9265A7319005B8315 /* QuitItem.swift */,
+				F412B0F32634F87B00DDE29E /* Process-Extensions.swift */,
+				F412B0F82634F8BC00DDE29E /* XcodeSearcher.swift */,
+				F40913712634B53D0067D3E1 /* Xcode.swift */,
+				F4CE8C7A2634141F00864C42 /* ViewController.swift */,
+				F412B13A2635B2B800DDE29E /* Localizable.swift */,
+				F412B13F2635B2BF00DDE29E /* LocalizedStrings.swift */,
+				F4CE8C7C2634142E00864C42 /* Assets.xcassets */,
+				F4CE8C7E2634142E00864C42 /* Main.storyboard */,
+				F4CE8C812634142E00864C42 /* Info.plist */,
+			);
+			path = XcodeSwitcherMenuBarExtra;
+			sourceTree = "<group>";
+		};
+		F4CE8C8A2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE8C8B2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.swift */,
+				F4CE8C8D2634142E00864C42 /* Info.plist */,
+			);
+			path = XcodeSwitcherMenuBarExtraTests;
+			sourceTree = "<group>";
+		};
+		F4CE8C952634142E00864C42 /* XcodeSwitcherMenuBarExtraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE8C962634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift */,
+				F4CE8C982634142E00864C42 /* Info.plist */,
+			);
+			path = XcodeSwitcherMenuBarExtraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4894B2A263F852E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4894B31263F852E00E8B861 /* Build configuration list for PBXNativeTarget "com.masakih.XcodeSwitcherMenuBarHelper" */;
+			buildPhases = (
+				F4894B27263F852E00E8B861 /* Sources */,
+				F4894B28263F852E00E8B861 /* Frameworks */,
+				F4894B29263F852E00E8B861 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = com.masakih.XcodeSwitcherMenuBarHelper;
+			productName = XcodeBuildHelper;
+			productReference = F4894B2B263F852E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+		F4CE8C742634141F00864C42 /* XcodeSwitcherMenuBarExtra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CE8C9B2634142E00864C42 /* Build configuration list for PBXNativeTarget "XcodeSwitcherMenuBarExtra" */;
+			buildPhases = (
+				F4CE8C712634141F00864C42 /* Sources */,
+				F4CE8C722634141F00864C42 /* Frameworks */,
+				F4CE8C732634141F00864C42 /* Resources */,
+				F4894B48263FF7FA00E8B861 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4894B4B263FF82700E8B861 /* PBXTargetDependency */,
+			);
+			name = XcodeSwitcherMenuBarExtra;
+			productName = XcodeChangerMenuarExtra;
+			productReference = F4CE8C752634141F00864C42 /* XcodeSwitcherMenuBarExtra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4CE8C862634142E00864C42 /* XcodeSwitcherMenuBarExtraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CE8C9E2634142E00864C42 /* Build configuration list for PBXNativeTarget "XcodeSwitcherMenuBarExtraTests" */;
+			buildPhases = (
+				F4CE8C832634142E00864C42 /* Sources */,
+				F4CE8C842634142E00864C42 /* Frameworks */,
+				F4CE8C852634142E00864C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4CE8C892634142E00864C42 /* PBXTargetDependency */,
+			);
+			name = XcodeSwitcherMenuBarExtraTests;
+			productName = XcodeChangerMenuarExtraTests;
+			productReference = F4CE8C872634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4CE8C912634142E00864C42 /* XcodeSwitcherMenuBarExtraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CE8CA12634142E00864C42 /* Build configuration list for PBXNativeTarget "XcodeSwitcherMenuBarExtraUITests" */;
+			buildPhases = (
+				F4CE8C8E2634142E00864C42 /* Sources */,
+				F4CE8C8F2634142E00864C42 /* Frameworks */,
+				F4CE8C902634142E00864C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4CE8C942634142E00864C42 /* PBXTargetDependency */,
+			);
+			name = XcodeSwitcherMenuBarExtraUITests;
+			productName = XcodeChangerMenuarExtraUITests;
+			productReference = F4CE8C922634142E00864C42 /* XcodeSwitcherMenuBarExtraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4CE8C6D2634141F00864C42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					F4894B2A263F852E00E8B861 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					F4CE8C742634141F00864C42 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					F4CE8C862634142E00864C42 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F4CE8C742634141F00864C42;
+					};
+					F4CE8C912634142E00864C42 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F4CE8C742634141F00864C42;
+					};
+				};
+			};
+			buildConfigurationList = F4CE8C702634141F00864C42 /* Build configuration list for PBXProject "XcodeSwitcherMenuBarExtra" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = F4CE8C6C2634141F00864C42;
+			productRefGroup = F4CE8C762634141F00864C42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4CE8C742634141F00864C42 /* XcodeSwitcherMenuBarExtra */,
+				F4894B2A263F852E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper */,
+				F4CE8C862634142E00864C42 /* XcodeSwitcherMenuBarExtraTests */,
+				F4CE8C912634142E00864C42 /* XcodeSwitcherMenuBarExtraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4CE8C732634141F00864C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F485A4EE265BDA75005B8315 /* XcodeMenuItemView.xib in Resources */,
+				F485A4EC265BD810005B8315 /* SMJobBlessUtil.py in Resources */,
+				F4CE8C7D2634142E00864C42 /* Assets.xcassets in Resources */,
+				F4CE8C802634142E00864C42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CE8C852634142E00864C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CE8C902634142E00864C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4894B27263F852E00E8B861 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4894B46263FF5B500E8B861 /* CodesignCheck.swift in Sources */,
+				F4894B39263F855000E8B861 /* HelperAuthorizationRight.swift in Sources */,
+				F4894B3B263F855000E8B861 /* HelperConstants.swift in Sources */,
+				F4894B2E263F852E00E8B861 /* main.swift in Sources */,
+				F4894B3E263F856300E8B861 /* AppProtocol.swift in Sources */,
+				F4894B3A263F855000E8B861 /* Helper.swift in Sources */,
+				F4894B37263F855000E8B861 /* HelperProtocol.swift in Sources */,
+				F4894B38263F855000E8B861 /* HelperAuthorization.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CE8C712634141F00864C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F485A4EA265A7319005B8315 /* QuitItem.swift in Sources */,
+				F4CE8C7B2634141F00864C42 /* ViewController.swift in Sources */,
+				F412B0F92634F8BC00DDE29E /* XcodeSearcher.swift in Sources */,
+				F4894B41263F861400E8B861 /* HelperConstants.swift in Sources */,
+				F4894B3D263F855C00E8B861 /* AppProtocol.swift in Sources */,
+				F4894B42263F861800E8B861 /* HelperProtocol.swift in Sources */,
+				F4CE8C792634141F00864C42 /* AppDelegate.swift in Sources */,
+				F4894B3F263F860E00E8B861 /* HelperAuthorization.swift in Sources */,
+				F485A4F2265BE103005B8315 /* XcodeMenuItemViewController.swift in Sources */,
+				F40913722634B53D0067D3E1 /* Xcode.swift in Sources */,
+				F412B1312635B28800DDE29E /* ActionPublisher.swift in Sources */,
+				F4894B40263F861100E8B861 /* HelperAuthorizationRight.swift in Sources */,
+				F412B14D2635B3A400DDE29E /* StatusBar.swift in Sources */,
+				F412B1402635B2BF00DDE29E /* LocalizedStrings.swift in Sources */,
+				F412B13B2635B2B800DDE29E /* Localizable.swift in Sources */,
+				F4894B552652B7D300E8B861 /* XcodeMenuItem.swift in Sources */,
+				F485A4E8265A7109005B8315 /* StatusItem.swift in Sources */,
+				F4894B4F2645655800E8B861 /* HelperConnector.swift in Sources */,
+				F412B0F42634F87B00DDE29E /* Process-Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CE8C832634142E00864C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CE8C8C2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CE8C8E2634142E00864C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CE8C972634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4894B4B263FF82700E8B861 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4894B2A263F852E00E8B861 /* com.masakih.XcodeSwitcherMenuBarHelper */;
+			targetProxy = F4894B4A263FF82700E8B861 /* PBXContainerItemProxy */;
+		};
+		F4CE8C892634142E00864C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4CE8C742634141F00864C42 /* XcodeSwitcherMenuBarExtra */;
+			targetProxy = F4CE8C882634142E00864C42 /* PBXContainerItemProxy */;
+		};
+		F4CE8C942634142E00864C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4CE8C742634141F00864C42 /* XcodeSwitcherMenuBarExtra */;
+			targetProxy = F4CE8C932634142E00864C42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4CE8C7E2634142E00864C42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4CE8C7F2634142E00864C42 /* Base */,
+				F412B1102635933700DDE29E /* ja */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4894B2F263F852E00E8B861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q36Y25CV2M;
+				INFOPLIST_FILE = "$(SRCROOT)/XcodeSwitcherMenuBarHelper/Helper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"\"$(SRCROOT)/XcodeSwitcherMenuBarHelper/Helper-Info.plist\"",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"\"$(SRCROOT)/XcodeSwitcherMenuBarHelper/Helper-Launchd.plist\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeSwitcherMenuBarHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F4894B30263F852E00E8B861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q36Y25CV2M;
+				INFOPLIST_FILE = "$(SRCROOT)/XcodeSwitcherMenuBarHelper/Helper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"\"$(SRCROOT)/XcodeSwitcherMenuBarHelper/Helper-Info.plist\"",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"\"$(SRCROOT)/XcodeSwitcherMenuBarHelper/Helper-Launchd.plist\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeSwitcherMenuBarHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F4CE8C992634142E00864C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4CE8C9A2634142E00864C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F4CE8C9C2634142E00864C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q36Y25CV2M;
+				INFOPLIST_FILE = XcodeSwitcherMenuBarExtra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeSwitcherMenuBarExtra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F4CE8C9D2634142E00864C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q36Y25CV2M;
+				INFOPLIST_FILE = XcodeSwitcherMenuBarExtra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeSwitcherMenuBarExtra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F4CE8C9F2634142E00864C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = XcodeChangerMenuarExtraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeChangerMenuarExtraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XcodeSwitcherMenuBarExtra.app/Contents/MacOS/XcodeSwitcherMenuBarExtra";
+			};
+			name = Debug;
+		};
+		F4CE8CA02634142E00864C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = XcodeChangerMenuarExtraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeChangerMenuarExtraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XcodeSwitcherMenuBarExtra.app/Contents/MacOS/XcodeSwitcherMenuBarExtra";
+			};
+			name = Release;
+		};
+		F4CE8CA22634142E00864C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = XcodeChangerMenuarExtraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeChangerMenuarExtraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = XcodeChangerMenuarExtra;
+			};
+			name = Debug;
+		};
+		F4CE8CA32634142E00864C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = XcodeChangerMenuarExtraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeChangerMenuarExtraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = XcodeChangerMenuarExtra;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4894B31263F852E00E8B861 /* Build configuration list for PBXNativeTarget "com.masakih.XcodeSwitcherMenuBarHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4894B2F263F852E00E8B861 /* Debug */,
+				F4894B30263F852E00E8B861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4CE8C702634141F00864C42 /* Build configuration list for PBXProject "XcodeSwitcherMenuBarExtra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CE8C992634142E00864C42 /* Debug */,
+				F4CE8C9A2634142E00864C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4CE8C9B2634142E00864C42 /* Build configuration list for PBXNativeTarget "XcodeSwitcherMenuBarExtra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CE8C9C2634142E00864C42 /* Debug */,
+				F4CE8C9D2634142E00864C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4CE8C9E2634142E00864C42 /* Build configuration list for PBXNativeTarget "XcodeSwitcherMenuBarExtraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CE8C9F2634142E00864C42 /* Debug */,
+				F4CE8CA02634142E00864C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4CE8CA12634142E00864C42 /* Build configuration list for PBXNativeTarget "XcodeSwitcherMenuBarExtraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CE8CA22634142E00864C42 /* Debug */,
+				F4CE8CA32634142E00864C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4CE8C6D2634141F00864C42 /* Project object */;
+}
