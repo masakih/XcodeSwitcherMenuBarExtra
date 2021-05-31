@@ -59,22 +59,27 @@ final class XcodeMenuItem: UpdatableStatusItem {
         
         do {
             
-            defer { switchToolchain() }
+            defer { switchDeveloperDirectory() }
             
             guard tellQuitRunningXcode() else { return }
             
             quitRunningXcode()
         }
         
-        activateXcode(xcode)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            
+            self.activateXcode(self.xcode)
+        }
     }
     
-    private func switchToolchain() {
+    private func switchDeveloperDirectory() {
         
         do {
+            
             let helperCon = HelperConnector()
             let helper = try helperCon.helper()
             helper.switchDeveloperDirectory(url: self.xcode.url) { exitCode in
+                
                 guard exitCode == 0 else {
                     
                     print("Helper exit code is", exitCode)
