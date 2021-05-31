@@ -103,32 +103,44 @@ final class XcodeMenuItem: UpdatableStatusItem {
     
     private func quitRunningXcode() {
         
-        // TODO: Implement
-        
         if XcodeSearcher.runningXcode().isEmpty {
             
-            print("there is no running Xcode.")
             return
         }
-                
+        
         let target = NSAppleEventDescriptor(bundleIdentifier: "com.apple.dt.Xcode")
-        let ae = NSAppleEventDescriptor.appleEvent(withEventClass: kCoreEventClass,
-                                                   eventID: kAEQuitApplication,
-                                                   targetDescriptor: target,
-                                                   returnID: AEReturnID(kAutoGenerateReturnID),
-                                                   transactionID: AETransactionID(kAnyTransactionID))
+        let appleEvent = NSAppleEventDescriptor.appleEvent(withEventClass: kCoreEventClass,
+                                                           eventID: kAEQuitApplication,
+                                                           targetDescriptor: target,
+                                                           returnID: AEReturnID(kAutoGenerateReturnID),
+                                                           transactionID: AETransactionID(kAnyTransactionID))
         do {
-            let result = try ae.sendEvent(timeout: 1)
+            
+            let result = try appleEvent.sendEvent(timeout: 1)
+            
+            // TODO: Implement
             print(result)
         }
         catch {
             
+            // TODO: Implement
             print("ERROR sendEvent:", error)
         }
     }
     
     private func activateXcode(_ xcode: Xcode) {
         
-        // TODO: Implement
+        if NSWorkspace.shared.open(xcode.url) {
+            
+            return
+        }
+        
+        let alert = NSAlert()
+        
+        alert.alertStyle = .informational
+        alert.messageText = "Xcode awaking is fail."
+        alert.informativeText = "Xcode awaking is fail."
+        NSApplication.shared.activate(ignoringOtherApps: true)
+        _ = alert.runModal()
     }
 }
