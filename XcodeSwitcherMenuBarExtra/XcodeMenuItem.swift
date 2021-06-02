@@ -96,9 +96,17 @@ final class XcodeMenuItem: UpdatableStatusItem {
     
     private func tellQuitRunningXcode() -> Bool {
         
-        // TODO: Implement
-        
-        return true
+        let alert = NSAlert()
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Quit")
+        alert.addButton(withTitle: "Don't Quit")
+        alert.buttons
+            .filter { $0.title == "Don't Quit" }
+            .forEach { $0.keyEquivalent = "\u{1b}" }
+        alert.messageText = "Do you want to quit the running xcode?"
+        alert.informativeText = "Do you want to quit the running xcode?"
+        NSApplication.shared.activate(ignoringOtherApps: true)
+        return alert.runModal() == .OK
     }
     
     private func quitRunningXcode() {
@@ -138,8 +146,8 @@ final class XcodeMenuItem: UpdatableStatusItem {
         let alert = NSAlert()
         
         alert.alertStyle = .informational
-        alert.messageText = "Xcode awaking is fail."
-        alert.informativeText = "Xcode awaking is fail."
+        alert.messageText = "Failed to start Xcode"
+        alert.informativeText = "Failed to start Xcode."
         NSApplication.shared.activate(ignoringOtherApps: true)
         _ = alert.runModal()
     }
