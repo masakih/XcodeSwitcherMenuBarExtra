@@ -33,14 +33,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             
             print(error)
         }
-        
-//        print(
-//            "All of within Applications",
-//            XcodeSearcher.searchInApplications(),
-//            "\n",
-//            "All of running.",
-//            XcodeSearcher.runningXcode()
-//        )
     }
 }
 

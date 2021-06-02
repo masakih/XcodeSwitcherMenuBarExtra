@@ -171,7 +171,6 @@ final class XcodeMenuItemViewController: NSViewController {
         hilightView.layer?.cornerCurve = .continuous
         hilightView.isHidden = true
         
-//        print(view.bounds)
         let area = NSTrackingArea(rect: view.bounds,
                                   options: [
                                     .mouseEnteredAndExited,
