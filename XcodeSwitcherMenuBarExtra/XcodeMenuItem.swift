@@ -82,31 +82,36 @@ final class XcodeMenuItem: UpdatableStatusItem {
                 
                 guard exitCode == 0 else {
                     
-                    print("Helper exit code is", exitCode)
+                    Announce(configration:
+                                .init(style: .critical,
+                                      messageText: "Can not set new Deleloper Directory",
+                                      informativeText: "Xcode-select's exit code: \(exitCode)")
+                    ).show()
+                    
                     return
                 }
             }
         }
         catch {
             
-            // TODO: Implement
-            print(error)
+            Announce(configration:
+                        .init(style: .critical,
+                              messageText: "Can not set new Deleloper Directory",
+                              informativeText: "Fail to launch xcode-select.\n Error: \(error)")
+            ).show()
         }
     }
     
     private func tellQuitRunningXcode() -> Bool {
         
-        let alert = NSAlert()
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: "Quit")
-        alert.addButton(withTitle: "Don't Quit")
-        alert.buttons
-            .filter { $0.title == "Don't Quit" }
-            .forEach { $0.keyEquivalent = "\u{1b}" }
-        alert.messageText = "Do you want to quit the running xcode?"
-        alert.informativeText = "Do you want to quit the running xcode?"
-        NSApplication.shared.activate(ignoringOtherApps: true)
-        return alert.runModal() == .OK
+        return Announce(configration:
+                    .init(messageText: "Do you want to quit the running xcode?",
+                          informativeText: "Do you want to quit the running xcode?",
+                          buttonAttributes: [
+                            .init(title: "Quit"),
+                            .init(title: "Don't Quit", keyEquivalent: "\u{1b}")
+                          ])
+        ).show() == .OK
     }
     
     private func quitRunningXcode() {
@@ -131,8 +136,12 @@ final class XcodeMenuItem: UpdatableStatusItem {
         }
         catch {
             
-            // TODO: Implement
-            print("ERROR sendEvent:", error)
+            Announce(configration:
+                        .init(style: .critical,
+                              messageText: "Fail to quit Xcode.",
+                              informativeText: "Fail to quit Xcode. \nReason: \(error)"
+                )
+            ).show()
         }
     }
     
@@ -143,12 +152,9 @@ final class XcodeMenuItem: UpdatableStatusItem {
             return
         }
         
-        let alert = NSAlert()
-        
-        alert.alertStyle = .informational
-        alert.messageText = "Failed to start Xcode"
-        alert.informativeText = "Failed to start Xcode."
-        NSApplication.shared.activate(ignoringOtherApps: true)
-        _ = alert.runModal()
+        Announce(configration:
+                    .init(messageText: "Failed to start Xcode",
+                          informativeText: "Failed to start Xcode")
+        ).show()
     }
 }

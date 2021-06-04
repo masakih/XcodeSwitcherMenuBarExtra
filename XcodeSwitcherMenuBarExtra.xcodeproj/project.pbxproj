@@ -41,6 +41,7 @@
 		F4CE8C802634142E00864C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CE8C7E2634142E00864C42 /* Main.storyboard */; };
 		F4CE8C8C2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE8C8B2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests.swift */; };
 		F4CE8C972634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE8C962634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift */; };
+		F4DE1E1D26690E5300334826 /* Announce.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE1E1C26690E5300334826 /* Announce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		F4CE8C922634142E00864C42 /* XcodeSwitcherMenuBarExtraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeSwitcherMenuBarExtraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CE8C962634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeChangerMenuarExtraUITests.swift; sourceTree = "<group>"; };
 		F4CE8C982634142E00864C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4DE1E1C26690E5300334826 /* Announce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				F412B1302635B28800DDE29E /* ActionPublisher.swift */,
 				F412B14C2635B3A400DDE29E /* StatusBar.swift */,
 				F485A4E7265A7108005B8315 /* StatusItem.swift */,
+				F4DE1E1C26690E5300334826 /* Announce.swift */,
 				F4894B542652B7D300E8B861 /* XcodeMenuItem.swift */,
 				F485A4F1265BE103005B8315 /* XcodeMenuItemViewController.swift */,
 				F485A4ED265BDA75005B8315 /* XcodeMenuItemView.xib */,
@@ -423,6 +426,7 @@
 				F4894B42263F861800E8B861 /* HelperProtocol.swift in Sources */,
 				F4CE8C792634141F00864C42 /* AppDelegate.swift in Sources */,
 				F4894B3F263F860E00E8B861 /* HelperAuthorization.swift in Sources */,
+				F4DE1E1D26690E5300334826 /* Announce.swift in Sources */,
 				F485A4F2265BE103005B8315 /* XcodeMenuItemViewController.swift in Sources */,
 				F40913722634B53D0067D3E1 /* Xcode.swift in Sources */,
 				F412B1312635B28800DDE29E /* ActionPublisher.swift in Sources */,
