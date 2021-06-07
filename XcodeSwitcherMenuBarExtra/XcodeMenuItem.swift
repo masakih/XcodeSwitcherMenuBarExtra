@@ -66,7 +66,7 @@ final class XcodeMenuItem: UpdatableStatusItem {
             
             defer { switchDeveloperDirectory() }
             
-            guard tellQuitRunningXcode() else { return }
+            guard needsQuitRunningXcode() else { return }
             
             quitRunningXcode()
         }
@@ -107,16 +107,31 @@ final class XcodeMenuItem: UpdatableStatusItem {
         }
     }
     
+    private func needsQuitRunningXcode() -> Bool {
+        
+        guard let runningXcode = XcodeSearcher.runningXcode().first else {
+            
+            return false
+        }
+        
+        guard runningXcode != xcode else {
+            
+            return false
+        }
+        
+        return tellQuitRunningXcode()
+    }
+    
     private func tellQuitRunningXcode() -> Bool {
         
-        return Announce(configration:
-                    .init(messageText: "Do you want to quit the running xcode?",
-                          informativeText: "Do you want to quit the running xcode?",
+        Announce(configration:
+                    .init(messageText: "Do you want to quit the running Xcode?",
+                          informativeText: "Do you want to quit the running Xcode?",
                           buttonAttributes: [
                             .init(title: "Quit"),
                             .init(title: "Don't Quit", keyEquivalent: "\u{1b}")
                           ])
-        ).show() == .OK
+        ).show() == .alertFirstButtonReturn
     }
     
     private func quitRunningXcode() {
