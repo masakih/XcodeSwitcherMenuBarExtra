@@ -11,6 +11,11 @@ import Combine
 
 final class XcodeMenuItem: UpdatableStatusItem {
     
+    private struct AppleEventError: Error, CustomStringConvertible {
+        
+        let description: String
+    }
+    
     let xcode: Xcode
     let menuItem = NSMenuItem()
         
@@ -121,18 +126,35 @@ final class XcodeMenuItem: UpdatableStatusItem {
             return
         }
         
-        let target = NSAppleEventDescriptor(bundleIdentifier: "com.apple.dt.Xcode")
-        let appleEvent = NSAppleEventDescriptor.appleEvent(withEventClass: kCoreEventClass,
-                                                           eventID: kAEQuitApplication,
-                                                           targetDescriptor: target,
-                                                           returnID: AEReturnID(kAutoGenerateReturnID),
-                                                           transactionID: AETransactionID(kAnyTransactionID))
         do {
             
-            let result = try appleEvent.sendEvent(timeout: 1)
+            let target = NSAppleEventDescriptor(bundleIdentifier: "com.apple.dt.Xcode")
+            let appleEvent = NSAppleEventDescriptor.appleEvent(withEventClass: kCoreEventClass,
+                                                               eventID: kAEQuitApplication,
+                                                               targetDescriptor: target,
+                                                               returnID: AEReturnID(kAutoGenerateReturnID),
+                                                               transactionID: AETransactionID(kAnyTransactionID))
+            let result = try appleEvent.sendEvent(options: [.waitForReply], timeout: 10)
             
-            // TODO: Implement
-            print(result)
+            guard let osStatus = result.paramDescriptor(forKeyword: keyErrorNumber)?.int32Value else {
+                
+                throw AppleEventError(description: "Can not get errorNumder.")
+            }
+            
+            guard osStatus == noErr else {
+                
+                if let errorString = result.paramDescriptor(forKeyword: keyErrorString)?.stringValue {
+                    
+                    throw AppleEventError(description: "Xcode response error: \(errorString)")
+                }
+                
+                if let errorString = SecCopyErrorMessageString(osStatus, nil) {
+                    
+                    throw AppleEventError(description: "OSSutatus ErrorMessage: \(errorString)")
+                }
+                
+                throw AppleEventError(description: "keyErrorNumber: \(osStatus)")
+            }
         }
         catch {
             
