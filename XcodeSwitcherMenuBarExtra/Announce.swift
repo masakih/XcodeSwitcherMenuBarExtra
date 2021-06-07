@@ -58,11 +58,10 @@ struct Announce {
                 alert.addButton(withTitle: attr.title)
             }
         alert.buttons
-            .map { ($0, $0.title) }
-            .forEach { button, title in
+            .forEach { button in
                 
                 if let attr = configration.buttonAttributes
-                    .first(where: { $0.title == title } ) {
+                    .first(where: { $0.title == button.title } ) {
                     
                     attr.keyEquivalent.map { button.keyEquivalent = $0 }
                     button.keyEquivalentModifierMask = attr.keyEquivalentModifierMask
