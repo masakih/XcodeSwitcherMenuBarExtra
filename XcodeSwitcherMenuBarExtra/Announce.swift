@@ -9,7 +9,7 @@ import AppKit
 
 struct Announce {
     
-    struct Connfiguration {
+    struct Configuration {
         
         struct ButtonAttribute {
             
@@ -17,7 +17,9 @@ struct Announce {
             let keyEquivalent: String?
             let keyEquivalentModifierMask: NSEvent.ModifierFlags
             
-            init(title: String, keyEquivalent: String? = nil, keyEquivalentModifierMask: NSEvent.ModifierFlags = []) {
+            init(title: String,
+                 keyEquivalent: String? = nil,
+                 keyEquivalentModifierMask: NSEvent.ModifierFlags = []) {
                 
                 self.title = title
                 self.keyEquivalent = keyEquivalent
@@ -30,11 +32,10 @@ struct Announce {
         let informativeText: String
         let buttonAttributes: [ButtonAttribute]
         
-        
         init(style: NSAlert.Style = .informational,
              messageText: String,
              informativeText: String,
-             buttonAttributes: [Announce.Connfiguration.ButtonAttribute] = []) {
+             buttonAttributes: [Announce.Configuration.ButtonAttribute] = []) {
             
             self.style = style
             self.messageText = messageText
@@ -43,7 +44,7 @@ struct Announce {
         }
     }
     
-    let configration: Connfiguration
+    let configration: Configuration
     
     @discardableResult
     func show() -> NSApplication.ModalResponse {
