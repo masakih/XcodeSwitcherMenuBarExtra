@@ -60,10 +60,10 @@ struct Announce {
         alert.buttons
             .forEach { button in
                 
-                if let attr = configration.buttonAttributes
-                    .first(where: { $0.title == button.title } ) {
+                if let attr = configration.buttonAttributes.first(where: { $0.title == button.title }),
+                   let keyEquivalent = attr.keyEquivalent {
                     
-                    attr.keyEquivalent.map { button.keyEquivalent = $0 }
+                    button.keyEquivalent = keyEquivalent
                     button.keyEquivalentModifierMask = attr.keyEquivalentModifierMask
                 }
             }
