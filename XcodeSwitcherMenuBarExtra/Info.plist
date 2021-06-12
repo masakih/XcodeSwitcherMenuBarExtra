@@ -22,14 +22,16 @@
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
-	<key>NSMainStoryboardFile</key>
-	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>SMPrivilegedExecutables</key>
 	<dict>
 		<key>com.masakih.XcodeSwitcherMenuBarHelper</key>
-		<string>identifier "com.masakih.XcodeSwitcherMenuBarHelper" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Masaki Hori (44FQ85NYVL)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		<string>identifier &quot;com.masakih.XcodeSwitcherMenuBarHelper&quot; and anchor apple generic and certificate leaf[subject.CN] = &quot;Apple Development: Masaki Hori (44FQ85NYVL)&quot; and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
 	</dict>
 </dict>
 </plist>
