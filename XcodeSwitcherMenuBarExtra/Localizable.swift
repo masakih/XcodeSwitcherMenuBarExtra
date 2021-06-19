@@ -23,7 +23,12 @@ extension Localizable {
     
     var string: String {
         
-        return NSLocalizedString(key, tableName: table, bundle: .main, comment: comment)
+        NSLocalizedString(key, tableName: table, bundle: .main, comment: comment)
+    }
+    
+    func string(_ parmeters: CVarArg...) -> String {
+        
+        String(format: string, arguments: parmeters)
     }
 }
 
