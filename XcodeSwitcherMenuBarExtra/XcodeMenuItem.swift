@@ -89,8 +89,8 @@ final class XcodeMenuItem: UpdatableStatusItem {
                     
                     Announce(configration:
                                 .init(style: .critical,
-                                      messageText: "Can not set new Deleloper Directory",
-                                      informativeText: "Xcode-select's exit code: \(exitCode)")
+                                      messageText: LocalizedStrings.failToRunSwitchDevDirMsg.string,
+                                      informativeText: LocalizedStrings.failToRunSwitchDevDirInfo.string(exitCode))
                     ).show()
                     
                     return
@@ -101,8 +101,8 @@ final class XcodeMenuItem: UpdatableStatusItem {
             
             Announce(configration:
                         .init(style: .critical,
-                              messageText: "Can not set new Deleloper Directory",
-                              informativeText: "Fail to launch xcode-select.\n Error: \(error)")
+                              messageText: LocalizedStrings.canNotAttachHelperMsg.string,
+                              informativeText: LocalizedStrings.canNotAttachHelperInfo.string(error.localizedDescription))
             ).show()
         }
     }
@@ -125,11 +125,11 @@ final class XcodeMenuItem: UpdatableStatusItem {
     private func tellQuitRunningXcode() -> Bool {
         
         Announce(configration:
-                    .init(messageText: "Do you want to quit the running Xcode?",
-                          informativeText: "Do you want to quit the running Xcode?",
+                    .init(messageText: LocalizedStrings.tellQuitRunninngXcodeMsg.string,
+                          informativeText: LocalizedStrings.tellQuitRunninngXcodeInfo.string,
                           buttonAttributes: [
-                            .init(title: "Quit"),
-                            .init(title: "Don't Quit", keyEquivalent: "\u{1b}")
+                            .init(title: LocalizedStrings.tellQuitRunninngXcodeOK.string),
+                            .init(title: LocalizedStrings.tellQuitRunninngXcodeCancel.string, keyEquivalent: "\u{1b}")
                           ])
         ).show() == .alertFirstButtonReturn
     }
@@ -153,30 +153,30 @@ final class XcodeMenuItem: UpdatableStatusItem {
             
             guard let osStatus = result.paramDescriptor(forKeyword: keyErrorNumber)?.int32Value else {
                 
-                throw AppleEventError(description: "Can not get errorNumder.")
+                throw AppleEventError(description: LocalizedStrings.canNotGetErrorNumber.string)
             }
             
             guard osStatus == noErr else {
                 
                 if let errorString = result.paramDescriptor(forKeyword: keyErrorString)?.stringValue {
                     
-                    throw AppleEventError(description: "Xcode response error: \(errorString)")
+                    throw AppleEventError(description: LocalizedStrings.xcodeError.string(errorString))
                 }
                 
                 if let errorString = SecCopyErrorMessageString(osStatus, nil) {
                     
-                    throw AppleEventError(description: "OSSutatus ErrorMessage: \(errorString)")
+                    throw AppleEventError(description: LocalizedStrings.osErrorMessage.string(String(errorString)))
                 }
                 
-                throw AppleEventError(description: "keyErrorNumber: \(osStatus)")
+                throw AppleEventError(description: LocalizedStrings.osErrorNumber.string(osStatus))
             }
         }
         catch {
             
             Announce(configration:
                         .init(style: .critical,
-                              messageText: "Fail to quit Xcode.",
-                              informativeText: "Fail to quit Xcode. \nReason: \(error)"
+                              messageText: LocalizedStrings.failToQuitXcodeMsg.string,
+                              informativeText: LocalizedStrings.failToRunSwitchDevDirInfo.string(error.localizedDescription)
                 )
             ).show()
         }
@@ -190,8 +190,8 @@ final class XcodeMenuItem: UpdatableStatusItem {
         }
         
         Announce(configration:
-                    .init(messageText: "Failed to start Xcode",
-                          informativeText: "Failed to start Xcode")
+                    .init(messageText: LocalizedStrings.failToStartXcodeMsg.string,
+                          informativeText: LocalizedStrings.failToStartXcodeInfo.string)
         ).show()
     }
 }

@@ -14,16 +14,20 @@ class HelperConnector {
         
         let description: String
         
-        static let connectionInvalidate = Error(description: "Connection invalidate.")
-        static let notHelperProxy = Error(description: "Proxy is not Helper.")
-        static let canNotGetHelperInfoPlist = Error(description: "Can not get Helper's Info.plist.")
-        static let canNotGetHelperShortVersion = Error(description: "Can not get Helper's short version.")
-        static let canNotMakeAuthorizationRef = Error(description: "Can not make AuthorizationRef.")
-        static let failSMJobBless = Error(description: "SMJobBless failed.")
+        static let connectionInvalidate = Error(LocalizedStrings.connectionInvalidate)
+        static let notHelperProxy = Error(LocalizedStrings.notHelperProxy)
+        static let canNotGetHelperInfoPlist = Error(LocalizedStrings.canNotGetHelperInfoPlist)
+        static let canNotGetHelperShortVersion = Error(LocalizedStrings.canNotGetHelperShortVersion)
+        static let canNotMakeAuthorizationRef = Error(LocalizedStrings.canNotMakeAuthorizationRef)
+        static let failSMJobBless = Error(LocalizedStrings.failSMJobBless)
         
-        static let commandTimeOut = Error(description: "Command is time out.")
-        static let canNotGetInstalledHelperVersion = Error(description: "Can not get installed Helper version.")
+        static let commandTimeOut = Error(LocalizedStrings.commandTimeOut)
+        static let canNotGetInstalledHelperVersion = Error(LocalizedStrings.canNotGetInstalledHelperVersion)
         
+        init(_ localizedString: LocalizedString) {
+            
+            self.description = localizedString.string
+        }
     }
     
     private enum HelperStatus {
