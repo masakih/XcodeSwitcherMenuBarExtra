@@ -62,7 +62,7 @@
 "Quit" = "終了する";
 
 /* MenunItem: Quit */
-"Quit %@" = "終了する %@";
+"Quit %@" = "%@ を終了する";
 
 /* failSMJobBless */
 "SMJobBless failed." = "Helperのインストールに失敗しました。";

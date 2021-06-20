@@ -13,8 +13,8 @@ s/Fail to quit Xcode. \\nReason: %@/Xcodeを終了出来ませんでした。\\n
 s/Fail to quit Xcode./Xcodeを終了出来ませんでした。/2
 s/Failed to start Xcode/Xcodeを起動出来ませんでした。/2
 s/Proxy is not Helper./Helperが正しくインストールされていません。/2
-s/Quit/終了する/2
 s/Quit %@/%@ を終了する/2
+s/Quit/終了する/2
 s/SMJobBless failed./Helperのインストールに失敗しました。/2
 s/Xcode response error: %@/Xcodeからエラーを受信しました。： %@/2
 s/Xcode-select's exit code: %d/Xcode-selectのエラーコード： %d/2
