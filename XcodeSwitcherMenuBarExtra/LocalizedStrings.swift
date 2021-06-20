@@ -23,11 +23,10 @@ extension LocalizedStrings {
     static let failToRunSwitchDevDirMsg = LocalizedString("Can not set new Deleloper Directory", comment: "CfailToRunSwitchDevDirMsg")
     static let failToRunSwitchDevDirInfo = LocalizedString("Xcode-select's exit code: %d", comment: "failToRunSwitchDevDirInfo")
     
-    static let canNotAttachHelperMsg = LocalizedString("Can not set new Deleloper Directory", comment: "canNotAttachHelperMsg")
+    static let canNotAttachHelperMsg = failToRunSwitchDevDirMsg
     static let canNotAttachHelperInfo = LocalizedString("Fail to launch xcode-select.\n Error: %@", comment: "canNotAttachHelperInfo")
     
     static let tellQuitRunninngXcodeMsg = LocalizedString("Do you want to quit the running Xcode?", comment: "tellQuitRunninngXcodeMsg")
-    static let tellQuitRunninngXcodeInfo = LocalizedString("Do you want to quit the running Xcode?", comment: "tellQuitRunninngXcodeInfo")
     static let tellQuitRunninngXcodeOK = LocalizedString("Quit", comment: "tellQuitRunninngXcodeOK")
     static let tellQuitRunninngXcodeCancel = LocalizedString("Don't Quit", comment: "tellQuitRunninngXcodeCancel")
     
@@ -35,7 +34,6 @@ extension LocalizedStrings {
     static let failToQuitXcodeInfo = LocalizedString("Fail to quit Xcode. \nReason: %@", comment: "failToQuitXcodeInfo")
     
     static let failToStartXcodeMsg = LocalizedString("Failed to start Xcode", comment: "failToStartXcodeMsg")
-    static let failToStartXcodeInfo = LocalizedString("Failed to start Xcode", comment: "failToStartXcodeInfo")
 }
 
 

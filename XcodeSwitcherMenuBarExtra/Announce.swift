@@ -29,12 +29,12 @@ struct Announce {
         
         let style: NSAlert.Style
         let messageText: String
-        let informativeText: String
+        let informativeText: String?
         let buttonAttributes: [ButtonAttribute]
         
         init(style: NSAlert.Style = .informational,
              messageText: String,
-             informativeText: String,
+             informativeText: String? = nil,
              buttonAttributes: [Announce.Configuration.ButtonAttribute] = []) {
             
             self.style = style
@@ -70,7 +70,7 @@ struct Announce {
             }
         
         alert.messageText = configration.messageText
-        alert.informativeText = configration.informativeText
+        configration.informativeText.map { alert.informativeText = $0 }
         
         NSApplication.shared.activate(ignoringOtherApps: true)
         

@@ -41,6 +41,7 @@
 		F4CE8C972634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE8C962634142E00864C42 /* XcodeChangerMenuarExtraUITests.swift */; };
 		F4DE1E1D26690E5300334826 /* Announce.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE1E1C26690E5300334826 /* Announce.swift */; };
 		F4EC770726712A32009155ED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4EC770626712A32009155ED /* MainMenu.xib */; };
+		F4EC7713267EC6F8009155ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4EC7711267EC6F8009155ED /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,10 @@
 		F4CE8C982634142E00864C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DE1E1C26690E5300334826 /* Announce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announce.swift; sourceTree = "<group>"; };
 		F4EC770626712A32009155ED /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		F4EC7708267EB883009155ED /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F4EC770B267EB892009155ED /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = ja; path = ja.lproj/Makefile; sourceTree = "<group>"; };
+		F4EC770E267EB8A6009155ED /* ja */ = {isa = PBXFileReference; lastKnownFileType = text; name = ja; path = ja.lproj/Localizable.strings.sed; sourceTree = "<group>"; };
+		F4EC7712267EC6F8009155ED /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +227,10 @@
 				F4CE8C7C2634142E00864C42 /* Assets.xcassets */,
 				F4EC770626712A32009155ED /* MainMenu.xib */,
 				F4CE8C812634142E00864C42 /* Info.plist */,
+				F4EC7708267EB883009155ED /* Makefile */,
+				F4EC7711267EC6F8009155ED /* Localizable.strings */,
+				F4EC770D267EB8A6009155ED /* Localizable.strings.sed */,
+				F4EC770A267EB892009155ED /* Makefile */,
 			);
 			path = XcodeSwitcherMenuBarExtra;
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4CE8C9B2634142E00864C42 /* Build configuration list for PBXNativeTarget "XcodeSwitcherMenuBarExtra" */;
 			buildPhases = (
+				F4EC7710267EB9C6009155ED /* ShellScript */,
 				F4CE8C712634141F00864C42 /* Sources */,
 				F4CE8C722634141F00864C42 /* Frameworks */,
 				F4CE8C732634141F00864C42 /* Resources */,
@@ -371,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EC7713267EC6F8009155ED /* Localizable.strings in Resources */,
 				F485A4EE265BDA75005B8315 /* XcodeMenuItemView.xib in Resources */,
 				F485A4EC265BD810005B8315 /* SMJobBlessUtil.py in Resources */,
 				F4CE8C7D2634142E00864C42 /* Assets.xcassets in Resources */,
@@ -393,6 +404,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4EC7710267EB9C6009155ED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd XcodeSwitcherMenuBarExtra\nmake Localizable\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4894B27263F852E00E8B861 /* Sources */ = {
@@ -471,6 +502,33 @@
 			targetProxy = F4CE8C932634142E00864C42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4EC770A267EB892009155ED /* Makefile */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EC770B267EB892009155ED /* ja */,
+			);
+			name = Makefile;
+			sourceTree = "<group>";
+		};
+		F4EC770D267EB8A6009155ED /* Localizable.strings.sed */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EC770E267EB8A6009155ED /* ja */,
+			);
+			name = Localizable.strings.sed;
+			sourceTree = "<group>";
+		};
+		F4EC7711267EC6F8009155ED /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EC7712267EC6F8009155ED /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F4894B2F263F852E00E8B861 /* Debug */ = {

@@ -126,7 +126,6 @@ final class XcodeMenuItem: UpdatableStatusItem {
         
         Announce(configration:
                     .init(messageText: LocalizedStrings.tellQuitRunninngXcodeMsg.string,
-                          informativeText: LocalizedStrings.tellQuitRunninngXcodeInfo.string,
                           buttonAttributes: [
                             .init(title: LocalizedStrings.tellQuitRunninngXcodeOK.string),
                             .init(title: LocalizedStrings.tellQuitRunninngXcodeCancel.string, keyEquivalent: "\u{1b}")
@@ -190,8 +189,7 @@ final class XcodeMenuItem: UpdatableStatusItem {
         }
         
         Announce(configration:
-                    .init(messageText: LocalizedStrings.failToStartXcodeMsg.string,
-                          informativeText: LocalizedStrings.failToStartXcodeInfo.string)
+                    .init(messageText: LocalizedStrings.failToStartXcodeMsg.string)
         ).show()
     }
 }

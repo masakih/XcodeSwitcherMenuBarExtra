@@ -1,0 +1,75 @@
+/* canNotGetErrorNumber */
+"Can not get errorNumder." = "errorNumderが取得出来ませんでした。";
+
+/* canNotGetHelperInfoPlist */
+"Can not get Helper's Info.plist." = "HelperのInfo.plistが見つかりませんでした。";
+
+/* canNotGetHelperShortVersion */
+"Can not get Helper's short version." = "Helperのバーションが取得出来ませんでした。";
+
+/* canNotGetInstalledHelperVersion */
+"Can not get installed Helper version." = "インストールされたHelperのバーションが取得出来ませんでした。";
+
+/* canNotMakeAuthorizationRef */
+"Can not make AuthorizationRef." = "AuthorizationRefが生成出来ませんでした。";
+
+/* CfailToRunSwitchDevDirMsg */
+"Can not set new Deleloper Directory" = "Deleloper Directoryが設定出来ませんでした。";
+
+/* Preference: OpenPanel: Choose button */
+"Choose" = "Choose";
+
+/* Preference: OpenPanel: Message */
+"Chose Target Application" = "Chose Target Application";
+
+/* commandTimeOut */
+"Command is time out." = "タイムアウトしました。";
+
+/* connectionInvalidate */
+"Connection invalidate." = "Helperに接続出来ません。";
+
+/* tellQuitRunninngXcodeMsg */
+"Do you want to quit the running Xcode?" = "起動中のXcodeを終了しますか？";
+
+/* tellQuitRunninngXcodeCancel */
+"Don't Quit" = "終了しない";
+
+/* canNotAttachHelperInfo */
+"Fail to launch xcode-select.\n Error: %@" = "xcode-selectが起動出来ませんでした。\nエラー： %@";
+
+/* failToQuitXcodeMsg */
+"Fail to quit Xcode." = "Xcodeを終了出来ませんでした。";
+
+/* failToQuitXcodeInfo */
+"Fail to quit Xcode. \nReason: %@" = "Xcodeを終了出来ませんでした。\n詳細： %@";
+
+/* failToStartXcodeMsg */
+"Failed to start Xcode" = "Xcodeを起動出来ませんでした。";
+
+/* osErrorNumber */
+"keyErrorNumber: %d" = "keyErrorNumber: %d";
+
+/* osErrorMessage */
+"OSSutatus ErrorMessage: %@" = "OSSutatus ErrorMessage: %@";
+
+/* MenunItem: Preference */
+"Preference..." = "Preference...";
+
+/* notHelperProxy */
+"Proxy is not Helper." = "Helperが正しくインストールされていません。";
+
+/* tellQuitRunninngXcodeOK */
+"Quit" = "終了する";
+
+/* MenunItem: Quit */
+"Quit %@" = "終了する %@";
+
+/* failSMJobBless */
+"SMJobBless failed." = "Helperのインストールに失敗しました。";
+
+/* xcodeError */
+"Xcode response error: %@" = "Xcodeからエラーを受信しました。： %@";
+
+/* failToRunSwitchDevDirInfo */
+"Xcode-select's exit code: %d" = "Xcode-selectのエラーコード： %d";
+
