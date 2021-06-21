@@ -16,7 +16,6 @@
 		F412B14D2635B3A400DDE29E /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412B14C2635B3A400DDE29E /* StatusBar.swift */; };
 		F485A4E8265A7109005B8315 /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485A4E7265A7108005B8315 /* StatusItem.swift */; };
 		F485A4EA265A7319005B8315 /* QuitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485A4E9265A7319005B8315 /* QuitItem.swift */; };
-		F485A4EC265BD810005B8315 /* SMJobBlessUtil.py in Resources */ = {isa = PBXBuildFile; fileRef = F485A4EB265BD810005B8315 /* SMJobBlessUtil.py */; };
 		F485A4EE265BDA75005B8315 /* XcodeMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F485A4ED265BDA75005B8315 /* XcodeMenuItemView.xib */; };
 		F485A4F2265BE103005B8315 /* XcodeMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485A4F1265BE103005B8315 /* XcodeMenuItemViewController.swift */; };
 		F4894B2E263F852E00E8B861 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4894B2D263F852E00E8B861 /* main.swift */; };
@@ -132,6 +131,7 @@
 		F4EC770B267EB892009155ED /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = ja; path = ja.lproj/Makefile; sourceTree = "<group>"; };
 		F4EC770E267EB8A6009155ED /* ja */ = {isa = PBXFileReference; lastKnownFileType = text; name = ja; path = ja.lproj/Localizable.strings.sed; sourceTree = "<group>"; };
 		F4EC7712267EC6F8009155ED /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4EC7715267F35C2009155ED /* XcodeSwitcherMenuBarExtra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeSwitcherMenuBarExtra.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +208,7 @@
 		F4CE8C772634141F00864C42 /* XcodeSwitcherMenuBarExtra */ = {
 			isa = PBXGroup;
 			children = (
+				F4EC7715267F35C2009155ED /* XcodeSwitcherMenuBarExtra.entitlements */,
 				F4894B3C263F855C00E8B861 /* AppProtocol.swift */,
 				F4894B4E2645655800E8B861 /* HelperConnector.swift */,
 				F4CE8C782634141F00864C42 /* AppDelegate.swift */,
@@ -336,7 +337,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "Hori, Masaki";
 				TargetAttributes = {
 					F4894B2A263F852E00E8B861 = {
 						CreatedOnToolsVersion = 12.5;
@@ -383,7 +385,6 @@
 			files = (
 				F4EC7713267EC6F8009155ED /* Localizable.strings in Resources */,
 				F485A4EE265BDA75005B8315 /* XcodeMenuItemView.xib in Resources */,
-				F485A4EC265BD810005B8315 /* SMJobBlessUtil.py in Resources */,
 				F4CE8C7D2634142E00864C42 /* Assets.xcassets in Resources */,
 				F4EC770726712A32009155ED /* MainMenu.xib in Resources */,
 			);
@@ -534,11 +535,12 @@
 		F4894B2F263F852E00E8B861 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Masaki Hori (Q36Y25CV2M)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Q36Y25CV2M;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/XcodeSwitcherMenuBarHelper/Helper-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -551,6 +553,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeSwitcherMenuBarHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -558,11 +562,12 @@
 		F4894B30263F852E00E8B861 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Masaki Hori (Q36Y25CV2M)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Q36Y25CV2M;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/XcodeSwitcherMenuBarHelper/Helper-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -575,6 +580,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeSwitcherMenuBarHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -701,16 +708,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = XcodeSwitcherMenuBarExtra/XcodeSwitcherMenuBarExtra.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Masaki Hori (Q36Y25CV2M)";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3aa6d7a;
 				DEVELOPMENT_TEAM = Q36Y25CV2M;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XcodeSwitcherMenuBarExtra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeSwitcherMenuBarExtra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -723,16 +733,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = XcodeSwitcherMenuBarExtra/XcodeSwitcherMenuBarExtra.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Masaki Hori (Q36Y25CV2M)";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3aa6d7a;
 				DEVELOPMENT_TEAM = Q36Y25CV2M;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XcodeSwitcherMenuBarExtra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.masakih.XcodeSwitcherMenuBarExtra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
