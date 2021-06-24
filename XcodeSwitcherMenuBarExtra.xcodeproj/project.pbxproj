@@ -90,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F4079E702683F2700074B4E7 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		F40913712634B53D0067D3E1 /* Xcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xcode.swift; sourceTree = "<group>"; };
 		F412B0F32634F87B00DDE29E /* Process-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process-Extensions.swift"; sourceTree = "<group>"; };
 		F412B0F82634F8BC00DDE29E /* XcodeSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeSearcher.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		F4EC770E267EB8A6009155ED /* ja */ = {isa = PBXFileReference; lastKnownFileType = text; name = ja; path = ja.lproj/Localizable.strings.sed; sourceTree = "<group>"; };
 		F4EC7712267EC6F8009155ED /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4EC7715267F35C2009155ED /* XcodeSwitcherMenuBarExtra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeSwitcherMenuBarExtra.entitlements; sourceTree = "<group>"; };
+		F4FDF00626829FC600967F2C /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,8 @@
 		F4CE8C6C2634141F00864C42 = {
 			isa = PBXGroup;
 			children = (
+				F4079E702683F2700074B4E7 /* ExportOptions.plist */,
+				F4FDF00626829FC600967F2C /* Makefile */,
 				F4CE8C772634141F00864C42 /* XcodeSwitcherMenuBarExtra */,
 				F4894B2C263F852E00E8B861 /* XcodeSwitcherMenuBarHelper */,
 				F4CE8C8A2634142E00864C42 /* XcodeSwitcherMenuBarExtraTests */,
