@@ -27,11 +27,19 @@ JOBBLESS_CONFIGURATION=Debug
 CheckJobBless:
 	SMAC=`/usr/libexec/PlistBuddy -c "print :SMAuthorizedClients" $(HELPER_INFO_PLIST)`; \
 	SMPE=`/usr/libexec/PlistBuddy -c "print :SMPrivilegedExecutables:com.masakih.XcodeSwitcherMenuBarHelper" $(INFO_PLIST)`; \
-	if [ -z "$(SMAC)" -o -z '$(SMPE)' ]; then make JobBless; fi
+	if [ -z "$${SMAC}" -o -z "$${SMPE}" ]; then \
+	  make JobBless; \
+	fi
 
 JobBless:
-	$(XCODEBUILD) -derivedDataPath=$(BUILD_PATH) -configuration $(JOBBLESS_CONFIGURATION) -target $(TARGET)
-	$(JOBBLESS_PY) setreq $(BUILD_PATH)/$(JOBBLESS_CONFIGURATION)/$(APP_BUNDLE) $(INFO_PLIST) $(HELPER_INFO_PLIST)
+	$(XCODEBUILD) \
+	  -derivedDataPath=$(BUILD_PATH) \
+	  -configuration $(JOBBLESS_CONFIGURATION) \
+	  -target $(TARGET)
+	$(JOBBLESS_PY) setreq \
+	  $(BUILD_PATH)/$(JOBBLESS_CONFIGURATION)/$(APP_BUNDLE) \
+	  $(INFO_PLIST) \
+	  $(HELPER_INFO_PLIST)
 
 ClearJobBless:
 	/usr/libexec/PlistBuddy -c "delete :SMAuthorizedClients" $(HELPER_INFO_PLIST)
