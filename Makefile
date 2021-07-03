@@ -76,7 +76,7 @@ notarize: exportArchive
 	  sleep 10; \
 	done
 
-claen:
+claen: ClearJobBless
 	rm -fr $(BUILD_PATH)
 	rm -fr $(ARCHIVE_PATH)
 	rm -fr $(EXPORT_PATH)
